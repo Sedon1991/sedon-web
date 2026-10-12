@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sedon1991.github.io/sedon-web/sitemap.xml
