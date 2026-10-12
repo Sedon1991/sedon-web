@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEDON · Sedación Consciente en Odontología | Solicitar turno</title>
+<meta name="description" content="SEDON - Odontología integral y periodoncia con sedación consciente. Más de 40 años. Barrancas de Belgrano, CABA. Solicitar turno por WhatsApp.">
+<style>
+  :root{
+    --teal:#0e7d7b;
+    --teal-dark:#0a5e5d;
+    --teal-light:#e6f4f3;
+    --cream:#fdfaf6;
+    --ink:#1e2b2b;
+    --muted:#5b6e6d;
+    --accent:#ffb703;
+    --card:#ffffff;
+    --radius:18px;
+    --shadow:0 10px 30px rgba(14,125,123,.12);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Inter,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:50;background:rgba(253,250,246,.95);backdrop-filter:blur(8px);border-bottom:1px solid #e8e0d6}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;max-width:1100px;margin:0 auto}
+  .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .logo-mark{width:44px;height:44px;border-radius:14px;background:var(--teal);color:#fff;display:grid;place-items:center;font-weight:800;font-size:24px}
+  .logo b{display:block;line-height:1;font-size:20px;letter-spacing:.08em}
+  .logo small{display:block;font-size:12px;color:var(--muted);font-weight:500}
+  .nav-links{display:flex;gap:18px;align-items:center}
+  .nav-links a.link{text-decoration:none;font-weight:600;font-size:15px;color:var(--ink)}
+  .nav-links a.link:hover{color:var(--teal)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;text-decoration:none;font-weight:800;border-radius:999px;padding:14px 24px;font-size:16px;transition:.18s}
+  .btn:active{transform:scale(.98)}
+  .btn-teal{background:var(--teal);color:#fff;box-shadow:0 8px 20px rgba(14,125,123,.3)}
+  .btn-teal:hover{background:var(--teal-dark)}
+  .btn-wa{background:#25D366;color:#08351f;box-shadow:0 8px 20px rgba(37,211,102,.35)}
+  .btn-wa:hover{filter:brightness(.95)}
+  .btn-outline{background:#fff;border:2px solid var(--teal);color:var(--teal)}
+  .btn-outline:hover{background:var(--teal-light)}
+  .btn-sm{padding:10px 18px;font-size:14px}
+  .hero{padding:56px 0 28px;background:linear-gradient(180deg,#eaf6f5 0%, var(--cream) 100%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+  .pill{display:inline-block;background:#fff;border:1px solid #d8e9e8;color:var(--teal-dark);font-weight:700;font-size:13px;padding:7px 14px;border-radius:999px;margin-bottom:14px}
+  h1{font-size:clamp(32px,5vw,52px);line-height:1.05;margin:0 0 14px}
+  h1 span{color:var(--teal)}
+  .lead{font-size:18px;color:#334443;margin:0 0 18px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0}
+  .chip{background:#fff;border:1px solid #e2ddd3;padding:8px 14px;border-radius:999px;font-size:14px;font-weight:600}
+  .hero-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;border:1px solid #eee5d7}
+  .hero-card h3{margin:0 0 8px;font-size:20px}
+  .hero-card p{margin:0 0 16px;color:var(--muted)}
+  .hero-actions{display:grid;gap:10px}
+  .note{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0 0}
+  .stat{background:#fff;border-radius:14px;padding:14px;text-align:center;border:1px solid #eee}
+  .stat b{display:block;font-size:22px;color:var(--teal-dark)}
+  .stat span{font-size:13px;color:var(--muted)}
+  section{padding:44px 0}
+  h2{font-size:clamp(26px,3.5vw,36px);margin:0 0 10px;line-height:1.15}
+  .sub{color:var(--muted);margin:0 0 24px;max-width:720px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .card{background:var(--card);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);border:1px solid #eee5d7;display:flex;flex-direction:column}
+  .card .icon{font-size:32px}
+  .card h3{margin:12px 0 8px;font-size:20px}
+  .card p{margin:0 0 16px;color:#3d4f4e;font-size:15.5px;flex:1}
+  .banner{background:var(--teal);color:#fff;border-radius:22px;padding:30px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}
+  .banner h2{color:#fff}
+  .banner p{color:#d6efee;margin:0}
+  .team-tag{font-size:13px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:.06em}
+  .doc-role{font-size:14px;color:var(--teal-dark);font-weight:700;margin:4px 0 8px}
+  .contact-box{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .contact-card{background:#fff;border-radius:var(--radius);padding:26px;border:1px solid #eee5d7;box-shadow:var(--shadow)}
+  footer{background:#0b2e2d;color:#cde8e7;padding:28px 0;margin-top:20px}
+  footer a{color:#fff}
+  .wa-float{position:fixed;right:18px;bottom:18px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.25);text-decoration:none;font-size:30px}
+  .wa-float:hover{transform:scale(1.05)}
+  @media(max-width:860px){
+    .hero-grid,.contact-box{grid-template-columns:1fr}
+    .grid3{grid-template-columns:1fr}
+    .nav-links a.link{display:none}
+    .banner{grid-template-columns:1fr}
+    .stats{grid-template-columns:1fr 1fr}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="#top">
+      <div class="logo-mark">S</div>
+      <div><b>SEDON</b><small>Odontología integral · Periodoncia · Sedación consciente</small></div>
+    </a>
+    <div class="nav-links">
+      <a class="link" href="#tratamientos">Tratamientos</a>
+      <a class="link" href="#equipo">Equipo</a>
+      <a class="link" href="#contacto">Contacto</a>
+      <a class="btn btn-teal btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20solicitar%20un%20turno.%20%C2%BFMe%20ayudan%20a%20coordinar%3F" target="_blank" rel="noopener">Solicitar turno</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap hero">
+  <div class="hero-grid">
+    <div>
+      <div class="pill">SEDON · Sedación consciente en odontología</div>
+      <h1>Odontología integral y periodoncia con <span>enfoque humano e inclusivo</span></h1>
+      <p class="lead">Somos un equipo con más de 40 años de trayectoria, cuidando a personas con y sin discapacidad en un entorno seguro y respetuoso.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-wa" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20solicitar%20un%20turno.%20%C2%BFMe%20ayudan%20a%20coordinar%3F" target="_blank" rel="noopener">💬 Pedir turno por WhatsApp</a>
+        <a class="btn btn-outline" href="#tratamientos">Ver tratamientos</a>
+      </div>
+      <div class="chips">
+        <span class="chip">🦷 Odontología integral</span>
+        <span class="chip">🪥 Periodoncia</span>
+        <span class="chip">💙 Discapacidad y riesgo médico</span>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin:0">📍 Zona de Barrancas de Belgrano, Ciudad de Buenos Aires · Entorno accesible</p>
+      <div class="stats">
+        <div class="stat"><b>+40 años</b><span>trayectoria</span></div>
+        <div class="stat"><b>3</b><span>especialistas</span></div>
+        <div class="stat"><b>100%</b><span>trato humano</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Solicitar turno / consultas</h3>
+      <p>Tocá el botón y se abre WhatsApp con un mensaje listo para enviar. Solo tenés que apretar “enviar”.</p>
+      <div class="hero-actions">
+        <a class="btn btn-wa" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20solicitar%20un%20turno.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Solicitar turno ahora</a>
+        <a class="btn btn-teal" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20tengo%20una%20consulta%20sobre%20tratamientos.%20Quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener">Hacer una consulta</a>
+        <a class="btn btn-outline" href="#contacto">Ver ubicación e Instagram</a>
+      </div>
+      <div class="note">WhatsApp 11.2301.0039 (solo mensajes) · Respuesta en horario de consultorio</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+<section id="tratamientos">
+  <h2>Tratamientos</h2>
+  <p class="sub">Diseñamos planes integrales, con foco en encías y tejidos de soporte. Elegí un tratamiento y pedí tu turno directo por WhatsApp.</p>
+  <div class="grid3">
+    <div class="card">
+      <div class="icon">🦷</div>
+      <h3>Odontología integral</h3>
+      <p>Niños, adolescentes y adultos: controles, prevención, operatoria dental, conducto, prótesis y cirugía simple, integrando estética y función.</p>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20pedir%20turno%20de%20ODONTOLOG%C3%8DA%20INTEGRAL.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Pedir turno · Integral</a>
+    </div>
+    <div class="card">
+      <div class="icon">🪥</div>
+      <h3>Periodoncia</h3>
+      <p>Diagnóstico y tratamiento de gingivitis y periodontitis, limpiezas profundas, raspajes y mantenimiento para preservar tus piezas dentarias.</p>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20pedir%20turno%20de%20PERIODONCIA%20(enc%C3%ADas).%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Pedir turno · Periodoncia</a>
+    </div>
+    <div class="card">
+      <div class="icon">💙</div>
+      <h3>Discapacidad y riesgo médico</h3>
+      <p>Abordaje adaptado para discapacidad, condiciones sistémicas, ansiedad o fobias. Sedación consciente con óxido nitroso cuando está indicada.</p>
+      <a class="btn btn-wa btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20pedir%20turno%20con%20abordaje%20adaptado%20%2F%20sedaci%C3%B3n%20consciente.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Pedir turno · Adaptado</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="banner">
+    <div>
+      <h2>Más de 40 años de trayectoria</h2>
+      <p>Combinamos excelencia académica, tecnología actualizada y un abordaje respetuoso para quienes necesitan protocolos diferenciados.</p>
+    </div>
+    <a class="btn btn-wa" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20coordinar%20una%20primera%20consulta.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Coordinar primera consulta</a>
+  </div>
+</section>
+
+<section id="equipo">
+  <h2>Equipo</h2>
+  <p class="sub">Especialistas en sedación consciente y discapacidad, para pacientes con riesgo médico, ansiedad o fobias.</p>
+  <div class="grid3">
+    <div class="card">
+      <div class="team-tag">Odontóloga</div>
+      <h3>Dra. Teresita Ferrary</h3>
+      <div class="doc-role">Odontopediatría · Riesgo Médico y Discapacidad</div>
+      <p>Amplia trayectoria en abordaje integral de personas con discapacidad y condiciones médicas complejas, integrando clínica y docencia.</p>
+      <a class="btn btn-teal btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20pedir%20turno%20con%20la%20Dra.%20Teresita%20Ferrary.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Turno con Dra. Ferrary</a>
+    </div>
+    <div class="card">
+      <div class="team-tag">Odontopediatra</div>
+      <h3>Od. Maite Echaide</h3>
+      <div class="doc-role">Riesgo Médico y Discapacidad</div>
+      <p>Atención de niños, niñas y adolescentes, con enfoque respetuoso y gradual para disminuir la ansiedad.</p>
+      <a class="btn btn-teal btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20pedir%20turno%20con%20la%20Od.%20Maite%20Echaide.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Turno con Od. Echaide</a>
+    </div>
+    <div class="card">
+      <div class="team-tag">Odontóloga · Periodoncia</div>
+      <h3>Od. Lis Bianchi</h3>
+      <div class="doc-role">Periodoncia · Riesgo Médico y Discapacidad</div>
+      <p>Salud de encías y tejidos de soporte, con mirada integral, prevención y tratamientos personalizados.</p>
+      <a class="btn btn-teal btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20pedir%20turno%20con%20la%20Od.%20Lis%20Bianchi%20(periodoncia).%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">Turno con Od. Bianchi</a>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Turnos, consultas y ubicación</h2>
+  <p class="sub">Estamos en Barrancas de Belgrano, en un entorno accesible para movilidad reducida, condiciones complejas, ansiedad o fobias. Al coordinar te pasamos dirección exacta.</p>
+  <div class="contact-box">
+    <div class="contact-card">
+      <h3 style="margin-top:0">📲 Turnos y consultas</h3>
+      <p style="color:var(--muted)">Escribinos por WhatsApp para coordinar tu turno. También podés seguirnos en Instagram.</p>
+      <div style="display:grid;gap:10px;margin-top:14px">
+        <a class="btn btn-wa" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20solicitar%20un%20turno.%20Mi%20nombre%20es%3A%20" target="_blank" rel="noopener">WhatsApp 11.2301.0039</a>
+        <a class="btn btn-outline" href="https://instagram.com/sedon.odontologia" target="_blank" rel="noopener">@sedon.odontologia en Instagram</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <h3 style="margin-top:0">📍 Ubicación</h3>
+      <p style="color:var(--muted)">Zona de Barrancas de Belgrano, CABA.<br>Entorno accesible y seguro.</p>
+      <div style="display:grid;gap:10px;margin-top:14px">
+        <a class="btn btn-teal" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20coordinar%20un%20turno%20y%20recibir%20la%20direcci%C3%B3n%20e%20indicaciones%20de%20acceso." target="_blank" rel="noopener">Pedir dirección por WhatsApp</a>
+        <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Barrancas+de+Belgrano+Buenos+Aires" target="_blank" rel="noopener">Ver zona en mapa</a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+
+<a class="wa-float" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20solicitar%20un%20turno." target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center">
+    <div>© 2026 SEDON — Sedación Consciente en Odontología<br><small>+54 9 11 2301 0039 · contacto@sedon.cl</small></div>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/5491123010039?text=Hola%20SEDON%2C%20quiero%20solicitar%20un%20turno." target="_blank" rel="noopener">Solicitar turno</a>
+  </div>
+</footer>
+
+<script>window.__CF$cv$params={r:'a491d4780c1b57e7',t:'MTc5MTc2MzI4NQ==',u:'01a12d6a08da765098cd77623a822f0c',ut:'MYpgSsveTJKavSk.2GI1Ip_0ghlAHpIaO3uZT0QuMeM-1791763286-1.2.1.1-RLLQfgflUYE2tA6hbpAmiPdi2Kko1C.HtwmuJTC.BKllW4._nOYCSfuQ_3oYN5FxCZvb1Hlm3hqP9w4_9qivSWwR6gzmqg2tD.zh2B6F1fE',i:60};(function(){if(!document.body)return;var s=document.createElement('script');s.src='/cdn-cgi/challenge-platform/scripts/precursor/main.js';document.head.appendChild(s);})();</script></body>
+</html>
